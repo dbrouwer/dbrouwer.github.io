@@ -35,7 +35,7 @@
           dataLayer.push({
             "event": "confirmedWager",
             'wagerDetails': {
-              'wagerId': Math.round((Math.pow(32, length + 1) - Math.random() * Math.pow(32, length))).toString(32).slice(1),
+              'wagerId': (Math.random()*1e32).toString(36),
               'drfCustomerId': Math.floor((Math.random() * 10000) + 1),
               'totalCost': Math.floor((Math.random() * 10) + 1)
             }
