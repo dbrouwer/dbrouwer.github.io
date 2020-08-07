@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>GTM Test</title>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
@@ -21,7 +23,13 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <a href="#" id="button1">Button 1</a>
+jQuery('#button').click(function(){ 'dataLayer.push({ 'category':'homepage', // or use a macro to get url 'action':'click', 'label':'button', 'event':'click-event'}); });
 
-    <script src="http://code.jquery.com/jquery.js"></script>
+
+  <script>
+    $("#button1").click(function() {
+      alert("Hello World!");
+    });
+  </script>
   </body>
 </html>
