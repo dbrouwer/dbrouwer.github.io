@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      dataLayer = [];
+    </script>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -25,8 +29,13 @@
     <a href="#" id="button1">Button 1</a>
 
     <script>
-      $("#button1").click(function() {
-        alert("Hello World!");
+      $(function() {
+        // Set the buttons id in the jQuery function.
+        $("#button1").on("click", function() {
+          dataLayer.push({
+            "event": "confirmedWager",
+          });
+        });
       });
     </script>
   </body>
